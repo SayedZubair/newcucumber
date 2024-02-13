@@ -1,0 +1,8 @@
+1.created database utility
+1.to get object of resultset
+2.to get object of resultSetMetaData..we need it for hundling the colomns and thier names
+3. to retivve data from resultset and stotr in list of map
+
+now we can write test case
+feate files
+steps

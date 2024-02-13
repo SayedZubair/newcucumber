@@ -1,0 +1,9 @@
+{
+  "emp_firstname": "sayed",
+  "emp_lastname": "hashimi",
+  "emp_middle_name": "ms",
+  "emp_gender": "M",
+  "emp_birthday": "1989-01-14",
+  "emp_status": "confirmed",
+  "emp_job_title": "QA Engineer"
+}

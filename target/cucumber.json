@@ -1,0 +1,272 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2024-02-13T04:31:27.300Z",
+        "before": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 121.0.6167.161 with binary path C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027SAYEDZUBAIR\u0027, ip: \u0027192.168.1.65\u0027, os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002719.0.1\u0027\nDriver info: driver.version: ChromeDriver\nremote stacktrace: Backtrace:\n\tGetHandleVerifier [0x0042A813+48355]\n\t(No symbol) [0x003BC4B1]\n\t(No symbol) [0x002C5358]\n\t(No symbol) [0x002E61AC]\n\t(No symbol) [0x002E1EF3]\n\t(No symbol) [0x002E0579]\n\t(No symbol) [0x00310C55]\n\t(No symbol) [0x0031093C]\n\t(No symbol) [0x0030A536]\n\t(No symbol) [0x002E82DC]\n\t(No symbol) [0x002E93DD]\n\tGetHandleVerifier [0x0068AABD+2539405]\n\tGetHandleVerifier [0x006CA78F+2800735]\n\tGetHandleVerifier [0x006C456C+2775612]\n\tGetHandleVerifier [0x004B51E0+616112]\n\t(No symbol) [0x003C5F8C]\n\t(No symbol) [0x003C2328]\n\t(No symbol) [0x003C240B]\n\t(No symbol) [0x003B4FF7]\n\tBaseThreadInitThunk [0x77287BA9+25]\n\tRtlInitializeExceptionChain [0x7745BD2B+107]\n\tRtlClearBits [0x7745BCAF+191]\n\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)\r\n\tat org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)\r\n\tat org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)\r\n\tat org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)\r\n\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)\r\n\tat java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1016)\r\n\tat java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)\r\n\tat java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)\r\n\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)\r\n\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)\r\n\tat java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)\r\n\tat java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\r\n\tat java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)\r\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)\r\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:131)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:181)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:168)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:157)\r\n\tat utils.CommonMethods.openBrowserAndLaunchApplication(CommonMethods.java:36)\r\n\tat steps.Hooks.preCondition(Hooks.java:11)\r\n",
+              "duration": 2120536800,
+              "status": "failed"
+            },
+            "match": {
+              "location": "steps.Hooks.preCondition()"
+            }
+          }
+        ],
+        "line": 28,
+        "name": "Invalid login functionality",
+        "description": "",
+        "id": "login-functionality;invalid-login-functionality;;2",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)\" because \"ts\" is null\r\n\tat utils.CommonMethods.takeScreenshot(CommonMethods.java:121)\r\n\tat steps.Hooks.postCondition(Hooks.java:21)\r\n",
+              "duration": 3031300,
+              "status": "failed"
+            },
+            "match": {
+              "location": "steps.Hooks.postCondition(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "user enters different \"admin\" and \"cristiano\" and verify the \"Invalid credentials\" for it",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"admin\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"cristiano\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"Invalid credentials\"",
+                  "offset": 61
+                }
+              ],
+              "location": "steps.LoginSteps.user_enters_different_and_and_verify_the_for_it(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tc1105"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-02-13T04:31:29.504Z",
+        "before": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 121.0.6167.161 with binary path C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027SAYEDZUBAIR\u0027, ip: \u0027192.168.1.65\u0027, os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002719.0.1\u0027\nDriver info: driver.version: ChromeDriver\nremote stacktrace: Backtrace:\n\tGetHandleVerifier [0x0042A813+48355]\n\t(No symbol) [0x003BC4B1]\n\t(No symbol) [0x002C5358]\n\t(No symbol) [0x002E61AC]\n\t(No symbol) [0x002E1EF3]\n\t(No symbol) [0x002E0579]\n\t(No symbol) [0x00310C55]\n\t(No symbol) [0x0031093C]\n\t(No symbol) [0x0030A536]\n\t(No symbol) [0x002E82DC]\n\t(No symbol) [0x002E93DD]\n\tGetHandleVerifier [0x0068AABD+2539405]\n\tGetHandleVerifier [0x006CA78F+2800735]\n\tGetHandleVerifier [0x006C456C+2775612]\n\tGetHandleVerifier [0x004B51E0+616112]\n\t(No symbol) [0x003C5F8C]\n\t(No symbol) [0x003C2328]\n\t(No symbol) [0x003C240B]\n\t(No symbol) [0x003B4FF7]\n\tBaseThreadInitThunk [0x77287BA9+25]\n\tRtlInitializeExceptionChain [0x7745BD2B+107]\n\tRtlClearBits [0x7745BCAF+191]\n\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)\r\n\tat org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)\r\n\tat org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)\r\n\tat org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)\r\n\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)\r\n\tat java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1016)\r\n\tat java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)\r\n\tat java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)\r\n\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)\r\n\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)\r\n\tat java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)\r\n\tat java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\r\n\tat java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)\r\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)\r\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:131)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:181)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:168)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:157)\r\n\tat utils.CommonMethods.openBrowserAndLaunchApplication(CommonMethods.java:36)\r\n\tat steps.Hooks.preCondition(Hooks.java:11)\r\n",
+              "duration": 1342755600,
+              "status": "failed"
+            },
+            "match": {
+              "location": "steps.Hooks.preCondition()"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "Invalid login functionality",
+        "description": "",
+        "id": "login-functionality;invalid-login-functionality;;3",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)\" because \"ts\" is null\r\n\tat utils.CommonMethods.takeScreenshot(CommonMethods.java:121)\r\n\tat steps.Hooks.postCondition(Hooks.java:21)\r\n",
+              "duration": 1012600,
+              "status": "failed"
+            },
+            "match": {
+              "location": "steps.Hooks.postCondition(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 522600,
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "user enters different \"ronaldo\" and \"Hum@nhrm1233\" and verify the \"Invalid credentials\" for it",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ronaldo\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Hum@nhrm1233\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"Invalid credentials\"",
+                  "offset": 66
+                }
+              ],
+              "location": "steps.LoginSteps.user_enters_different_and_and_verify_the_for_it(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tc1105"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-02-13T04:31:30.868Z",
+        "before": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 121.0.6167.161 with binary path C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027SAYEDZUBAIR\u0027, ip: \u0027192.168.1.65\u0027, os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002719.0.1\u0027\nDriver info: driver.version: ChromeDriver\nremote stacktrace: Backtrace:\n\tGetHandleVerifier [0x0042A813+48355]\n\t(No symbol) [0x003BC4B1]\n\t(No symbol) [0x002C5358]\n\t(No symbol) [0x002E61AC]\n\t(No symbol) [0x002E1EF3]\n\t(No symbol) [0x002E0579]\n\t(No symbol) [0x00310C55]\n\t(No symbol) [0x0031093C]\n\t(No symbol) [0x0030A536]\n\t(No symbol) [0x002E82DC]\n\t(No symbol) [0x002E93DD]\n\tGetHandleVerifier [0x0068AABD+2539405]\n\tGetHandleVerifier [0x006CA78F+2800735]\n\tGetHandleVerifier [0x006C456C+2775612]\n\tGetHandleVerifier [0x004B51E0+616112]\n\t(No symbol) [0x003C5F8C]\n\t(No symbol) [0x003C2328]\n\t(No symbol) [0x003C240B]\n\t(No symbol) [0x003B4FF7]\n\tBaseThreadInitThunk [0x77287BA9+25]\n\tRtlInitializeExceptionChain [0x7745BD2B+107]\n\tRtlClearBits [0x7745BCAF+191]\n\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)\r\n\tat org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)\r\n\tat org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)\r\n\tat org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)\r\n\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)\r\n\tat java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1016)\r\n\tat java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)\r\n\tat java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)\r\n\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)\r\n\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)\r\n\tat java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)\r\n\tat java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\r\n\tat java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)\r\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)\r\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:131)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:181)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:168)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:157)\r\n\tat utils.CommonMethods.openBrowserAndLaunchApplication(CommonMethods.java:36)\r\n\tat steps.Hooks.preCondition(Hooks.java:11)\r\n",
+              "duration": 1261768800,
+              "status": "failed"
+            },
+            "match": {
+              "location": "steps.Hooks.preCondition()"
+            }
+          }
+        ],
+        "line": 30,
+        "name": "Invalid login functionality",
+        "description": "",
+        "id": "login-functionality;invalid-login-functionality;;4",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)\" because \"ts\" is null\r\n\tat utils.CommonMethods.takeScreenshot(CommonMethods.java:121)\r\n\tat steps.Hooks.postCondition(Hooks.java:21)\r\n",
+              "status": "failed"
+            },
+            "match": {
+              "location": "steps.Hooks.postCondition(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "user enters different \"\" and \"Hum@nhrm123\" and verify the \"Username cannot be empty\" for it",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Hum@nhrm123\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"Username cannot be empty\"",
+                  "offset": 58
+                }
+              ],
+              "location": "steps.LoginSteps.user_enters_different_and_and_verify_the_for_it(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tc1105"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-02-13T04:31:32.149Z",
+        "before": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 121.0.6167.161 with binary path C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027SAYEDZUBAIR\u0027, ip: \u0027192.168.1.65\u0027, os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002719.0.1\u0027\nDriver info: driver.version: ChromeDriver\nremote stacktrace: Backtrace:\n\tGetHandleVerifier [0x0042A813+48355]\n\t(No symbol) [0x003BC4B1]\n\t(No symbol) [0x002C5358]\n\t(No symbol) [0x002E61AC]\n\t(No symbol) [0x002E1EF3]\n\t(No symbol) [0x002E0579]\n\t(No symbol) [0x00310C55]\n\t(No symbol) [0x0031093C]\n\t(No symbol) [0x0030A536]\n\t(No symbol) [0x002E82DC]\n\t(No symbol) [0x002E93DD]\n\tGetHandleVerifier [0x0068AABD+2539405]\n\tGetHandleVerifier [0x006CA78F+2800735]\n\tGetHandleVerifier [0x006C456C+2775612]\n\tGetHandleVerifier [0x004B51E0+616112]\n\t(No symbol) [0x003C5F8C]\n\t(No symbol) [0x003C2328]\n\t(No symbol) [0x003C240B]\n\t(No symbol) [0x003B4FF7]\n\tBaseThreadInitThunk [0x77287BA9+25]\n\tRtlInitializeExceptionChain [0x7745BD2B+107]\n\tRtlClearBits [0x7745BCAF+191]\n\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)\r\n\tat org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)\r\n\tat org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)\r\n\tat org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)\r\n\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)\r\n\tat java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1016)\r\n\tat java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)\r\n\tat java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)\r\n\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)\r\n\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)\r\n\tat java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)\r\n\tat java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\r\n\tat java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)\r\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)\r\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:131)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:181)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:168)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:157)\r\n\tat utils.CommonMethods.openBrowserAndLaunchApplication(CommonMethods.java:36)\r\n\tat steps.Hooks.preCondition(Hooks.java:11)\r\n",
+              "duration": 1460379000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "steps.Hooks.preCondition()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "Invalid login functionality",
+        "description": "",
+        "id": "login-functionality;invalid-login-functionality;;5",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)\" because \"ts\" is null\r\n\tat utils.CommonMethods.takeScreenshot(CommonMethods.java:121)\r\n\tat steps.Hooks.postCondition(Hooks.java:21)\r\n",
+              "status": "failed"
+            },
+            "match": {
+              "location": "steps.Hooks.postCondition(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "user enters different \"admin\" and \"\" and verify the \"Password cannot be empty\" for it",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"admin\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"Password cannot be empty\"",
+                  "offset": 52
+                }
+              ],
+              "location": "steps.LoginSteps.user_enters_different_and_and_verify_the_for_it(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tc1105"
+          }
+        ]
+      }
+    ],
+    "name": "Login functionality",
+    "description": "",
+    "id": "login-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Login.feature",
+    "tags": []
+  }
+]

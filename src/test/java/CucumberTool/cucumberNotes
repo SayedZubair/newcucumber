@@ -1,0 +1,201 @@
+1.why we learn java to implement automation test using codes
+2.why Selenium,Selenium is a too  we use to automate the web  application or website since java is not able to automate
+but nothing is structured specially there was no report, no organisation
+3.WHy we learned testNg, to use things more organised and get a report
+
+Cucumber,, what is the reason we need cucumber, opem source, easy to get answers, its the market demond,, it works with lanaguages much better
+
+Cucumber as a tool, cucumber as framwork
+in the first3 classes we will study cucumber as a tool
+
+bdd behavioral driven development
+
+Given
+When
+And
+Then
+ is being used between technical and nontechncal people , using simple english
+
+ the fisrt advantages as atool is that it makes the codes undestasndbale for both devs and testers, if they dont use cucumber noone from other
+ branches
+teacher note
+ //we use bdd scenerios to give clear understading to other colleaugues in the team
+ ..in bdd we need special file should be named For eg, Login.feature it create a cucumber file
+
+user story search and employee
+seaerch by id
+
+the first scenario in login
+given user nevigates to Hrms Application
+when user enter valid user name and password
+and user clicks on login button
+then user nevigates to dashboard page
+when user user clicks on pim option
+and user clicks on employes information buttom
+when user enters employee id
+and user clicks on seearch butn
+then user see employee informatuon is displayed
+
+seaerch by name
+
+the first scenario in login
+given user nevigates to Hrms Application
+when user enter valid user name and password
+and user clicks on login button
+then user nevigates to dashboard page
+when user user clicks on pim option
+and user clicks on employes information buttom
+when user enters valid employee name
+and user clicks on seearch butn
+then user see employee informatuon is displayed
+
+
+
+
+recap1st class
+BDD- it alows us to write language in gherkin language --  the reason is to provide good communication between customer and
+                                                             technical guys
+
+ Feature-user Story
+ scenario-Test case every test case will be considered as scenario in BDD
+ Given, pre rereqisite/precondition
+ when, pefrmor actions
+ then -expected output
+ And , supporting tag
+
+ Step difinition- Cucumber provides you the snipped of step defination
+ in step defination we write the code to perform actions which has been written in the bdd statment
+
+ to excute all the features files from one class, we need runner class
+
+ to keep everything organised we need frameWork
+ allows to simplified and organised code and it provides folder to structrue which is easily understandble
+ in fW we have to seperate branches for java and non
+ in jva we pul classes
+ non java we put features and files etc
+
+ Step package= for all step difination
+ runner package for all runner clases
+ config directory = for all config files
+ feature directory for all the feature files
+
+ class number3
+ Recap, BDD, behaviral driven develoment
+ becasue the explanition part was availble in diagram
+
+ class4.
+ Recap-
+ Runner class -cucumber options in runner class
+ features- to run the feature file , we provide a path to its repository
+ glue - the path of our step difinations package
+ dryRun- if we set it to true, it stops actual exceution and scans all the step quick
+ and provide us missing step defination
+ monochrom- to remove irrelavant information from the console
+ plugin -pretty - tp print the steps in the console
+ tags - to group the scenario for specific type of execution
+
+
+ POM-page object model -it is a design pattern
+ it allows QA to keep Object repository-
+ in simple Language , QA's write all the locators of the page in respective class
+
+ LoginPage-
+ DashboardPage-
+
+class 05-
+Recap,
+runner class.. we need it to run our test cases as per the requirements or to excecute the test case as per my choice
+to genereate missing steps
+to print the steps in to console
+to generate the report
+
+page Obeject model is a design pattern and we use it to have organised code and easy to maintain structructure
+According, we create seperate class (page) According to the screens availble in the applicationand keep all the locatores
+of this page in it
+
+hooks in cucumber means we write pre and post condition using hooks in cucmumber
+@befor - precondition needs to be mentioned in this
+@after -post conditon needs to be mentioned in this
+
+Rules--> hooks class must be created inside steps package
+Background -- its aplicable only for 1 feaure file it means for every feature file background will be different
+Steps which are common amoung all the scenarious of that feature file will be taken into background but make sure
+the flow is not broken. if the flow breaks, then we can not take steps in background after that
+
+Hooks Vs background
+hooks are applicable for whole project for all the feature files
+background is applicble for one feautre file and varies from file to file
+first hooks execute then background then scenarious
+
+
+data driven , one test case being tested among many data given is called data driven testing
+
+class 6,
+Recap-
+page object model with page initialier class
+in this initialzer class we initialized all the objects of page classes and call the method in common method class in open
+browser method,
+we created a collection point in steps classes
+methods call from common method, locators call from respective page classes using object of that class
+
+background -->
+same steps in feature files among all the scenarious should be a part of it-
+
+Hooks--> prec condition for the entire project
+here we use two hooks -@Before and @After
+
+parameteriation testiing
+we can add one employee using feature file, instead of passing hardcoded data, we pass values inside the scenarios
+such as "abc","xyz" etc,
+--to increase the scope of testting we use data driven testing concept instead of scenarious we use
+use scenario outline with examples table
+--in examplw table, we pass multiple data sets using keys and values
+
+Data table .. it allows us to pass multiple sets of data without executing the backgroud
+
+out line Example table, hooks and background execute every time as per the data set
+scenario data table, hooks and background excutes just one time
+
+.xls- when we use this extention - we use HSSF librRY
+.xlsx-XSSF we use the XSSF libraet
+
+class 7;
+Recap,parameters passing for adding the employee
+earlier approach--> hardcoded data
+passing one set of data from feature file
+
+-- scenario outline - example table (for passing multiple data sets)
+--data table- hooks, background excute one time for multiple data sets
+-- Excel - to add or to pass large value of data
+
+
+cucumber accepts array of byte for screen shot
+when we generate any report we should have itexe under target folder
+right click openin browser chrome
+
+class8
+recap screenshot method , in cucumber it accepts array of byte
+to get the unique screenshot name we have implemented timestamp method
+we used scenario class of cucumber to get the details of execution
+to generate report we use html plugin from runner class
+reports always generate in target folder
+we execute our code from pom.xml file, to acheive this we have used maven surfire plugin
+
+maven cucmber reporting plugin we use to get more detaled and colorful report
+
+log files..
+when we excute our cude we need to sharpen our debagging skills to have quick information
+about evvery step of excution we need massage
+to get the detailed added by us we need to create log files to create this log file we use log
+4j concept
+
+maven life cycle
+compile - source code converts into binary code
+package- code will be packageed into jar files
+install- jars will be installed to local repo.m2
+deploy- here jars will go to remote repo
+test, code will be tested in this lifecycle
+clean- this wil claen ur target folder
+
+when u run test it will first start from commpile -install - deploy - test
+

@@ -1,0 +1,83 @@
+what is cucumber
+to create a cucmber framework or to use we need a mavon project then in pom.xml we need to add independcies
+
+in cucuber we have feature files and step difination
+
+what do we write in feature file? the user story
+bdd, behavorial driven testing mean we test the applicatin as the application behave or a user will behave or approach
+to the applcation
+this the gherkin keys and terms  https://cucumber.io/docs/gherkin/reference/
+
+internet copy
+GIVEN: Sets the context. What page are we on and what state are we in? Is the user an admin? Signed-in? Has created a campaign?
+WHEN: What actions the user is performing. What event occurred?
+THEN: What should the system do in response? What is the expected outcome?
+
+mooazam
+Given- pre condition
+When->Actions
+Then->Verification
+
+Scenario
+Given One thing
+Given Another thing
+Given yet another Thing
+When i open my eyes
+Then I should see something
+Then I shoulld not see something else
+
+Scenario2
+Given One thing
+Given Another thing
+Given yet another Thing
+When i open my eyes
+Then I should see something
+Then I shoulld not see something else
+
+But we can use in this case
+the login button display but not clickable
+
+
+Step defination
+@given(" one Thing ")
+public Onething(){
+}
+
+Cucumber FrameWork
+
+in frameWork we follow page Obeject model mean we have the following Packages
+
+Utils  -- 1.common methods 2.constants(everything That we use in ourProject And we never change like implicit/Ex wait,path screenshot
+or keyword or variable that we never change we add them in constant) 3. configReader4. Excel reader
+Pages-->Login page , timelinepage(in face Book),profile page
+Steps--test cases that are associated with login page--> login steps, timeline steps , profileSteps
+Runner: smokeRunner
+@RunWith(cucumber.class)
+@cucumberOption(
+feature=the path where is feature directory is "src/test/resources/features"
+glue"steps"connects the step deffination package
+DryRun=true  it will only scan for unimplemented steps
+
+tags="@smoke" it run only the test case with this name
+monochrome =true. It will remove the irrelevant information from the console
+plugin[Pretty]==show steps in consol
+
+
+)
+
+for non java we create a directory called Resources
+feature
+Feature:TestTheLoginOffaceBook
+Scenario:Login functionalty
+Given user nevigates to the url"facebook Url"
+when user enters the user name and password
+and user clicks on login butten then user is logged in
+
+
+
+config.properties---> its for configuration, all the information should be related to configuration like url
+the brower to execute other info does not need to be there but it still we can keep the user name and password
+browser
+url
+Data base Connection
+BaseUrl
