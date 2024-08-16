@@ -29,11 +29,13 @@ public static WebDriver driver;
         ConfigReader.readProperties(Constants.CONFIGURATION_FILEPATH);
         switch (ConfigReader.getPropertyValue("browser")){
             case "chrome":
-             //   WebDriverManager.chromedriver().version("116.0.5845.111").setup();
+             WebDriverManager.chromedriver().version("114").setup();
                 ChromeOptions options=new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*");
                WebDriverManager.chromedriver().setup();
+
                 driver =  new ChromeDriver(options);
+
 //              ChromeOptions chromeOptions = new ChromeOptions();
 //                chromeOptions.setHeadless(true);
 //                WebDriverManager.chromedriver().setup();

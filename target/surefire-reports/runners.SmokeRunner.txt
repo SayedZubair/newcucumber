@@ -1,4 +1,68 @@
 -------------------------------------------------------------------------------
 Test set: runners.SmokeRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.312 s - in runners.SmokeRunner
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 3.753 s <<< FAILURE! - in runners.SmokeRunner
+Login functionality.valid admin login  Time elapsed: 3.015 s  <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 127.0.6533.100 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SAYEDZUBAIR', ip: '192.168.1.65', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	GetHandleVerifier [0x0049A813+48355]
+	(No symbol) [0x0042C4B1]
+	(No symbol) [0x00335358]
+	(No symbol) [0x003561AC]
+	(No symbol) [0x00351EF3]
+	(No symbol) [0x00350579]
+	(No symbol) [0x00380C55]
+	(No symbol) [0x0038093C]
+	(No symbol) [0x0037A536]
+	(No symbol) [0x003582DC]
+	(No symbol) [0x003593DD]
+	GetHandleVerifier [0x006FAABD+2539405]
+	GetHandleVerifier [0x0073A78F+2800735]
+	GetHandleVerifier [0x0073456C+2775612]
+	GetHandleVerifier [0x005251E0+616112]
+	(No symbol) [0x00435F8C]
+	(No symbol) [0x00432328]
+	(No symbol) [0x0043240B]
+	(No symbol) [0x00424FF7]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x776CC10B+107]
+	RtlClearBits [0x776CC08F+191]
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1016)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
+	at utils.CommonMethods.openBrowserAndLaunchApplication(CommonMethods.java:36)
+	at steps.Hooks.preCondition(Hooks.java:11)
+
+Login functionality.valid admin login  Time elapsed: 3.016 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "ts" is null
+	at utils.CommonMethods.takeScreenshot(CommonMethods.java:121)
+	at steps.Hooks.postCondition(Hooks.java:21)
+

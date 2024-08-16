@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         dryRun=false,
         //dry run to fasle-it starts the execution
        // tags="@sprint3 or @sprint1",//the desired senario is either in sprnt1 or sprnt2
-        tags="@tc1105",
+        tags="@tc1101",
         //to remove irrelavant information from console, you need to set monochrome to true
         monochrome = true,
         //pretty keyword prints the steps in the console to increse readiblity

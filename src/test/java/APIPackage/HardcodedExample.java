@@ -46,6 +46,8 @@ static String employee_id;
         //using jsonpath method, we are extracting the value of any key  from the response body
         String firstName = response.jsonPath().getString("employee.emp_firstname");
        // System.out.println(firstName);
+
+
         //first way of assertion
         Assert.assertEquals(firstName, "sayed");
 
